@@ -29,7 +29,7 @@ class MyAction < BrowserAction
      # which is executed) with a method like `first` or `to_a`. Methods will be
      # added to count the total records, and to restrict the query to only where
      # *field* starts with the requested letter.
-     query: CompanyQuery.new
+     query: CompanyQuery.new,
 
      # *field* is the name of the field that contains the name of the record
      # which is to be sorted into alphabetical tabs. The provided query will
@@ -43,7 +43,12 @@ class MyAction < BrowserAction
      # route is "/companies" and you expect to use a URL query pararameter.
      # In both cases, the parameter name must be the same one provided to the
      # *letter* argument.
-     path: "/companies/"
+     path: "/companies/",
+
+     # *small* is the largest number of total records that should be rendered
+     # _without_ tabs, because they would all fit upon one page. If you don't
+     # include it, the default is 20.
+     small: 20
     )
 
     # Render your page, providing *html_tabs* which renders the tabs, and
@@ -56,7 +61,7 @@ end
 
 Do this in your page, and it will render the data separated into alphabetical tabs:
 ```
-# This resolves the query, so that you can present the data in a list, etc.
+  # This resolves the query, so that you can present the data in a list, etc.
   array = selected.to_a
   ul do
     array.each do |a|
