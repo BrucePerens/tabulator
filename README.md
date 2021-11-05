@@ -77,6 +77,12 @@ Do this in your page, and it will render the data separated into alphabetical ta
 end
 ```
 
+## Presentation
+If the number of total records is smaller than or equal to the *small* argument,
+default 20, the whole will be presented in one page, and no tabs will be rendered.
+
+Tabs that would be empty (because they contain no records) are not rendered.
+
 ## Nonalphabetical data
 A tab bearing the character '#' will be included for all data that doesn't start
 with a letter in your alphabet. If you have a lot of data that starts with
