@@ -27,11 +27,11 @@ class MyAction < BrowserAction
      # objects to be displayed, but must not be *resolved* (made a complete query
      # which is executed) with a method like `first` or `to_a`. Methods will be
      # added to count the total records, and to restrict the query to only where
-     # *name* starts with the requested letter.
+     # *field* starts with the requested letter.
      query: CompanyQuery.new
      # *field* is the name of the field that contains the name of the record
      # which is to be sorted into alphabetical tabs. The provided query will
-     # be extended to restrict the selected records to those in which *name*
+     # be extended to restrict the selected records to those in which *field*
      # starts with a the selected *letter*
      field: :name,
      # Path is the path to this action, minus the selected letter, which will
