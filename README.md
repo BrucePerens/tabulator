@@ -67,7 +67,7 @@ Do this in your page, and it will render the data separated into alphabetical ta
   raw html_tabs
 end
 
-++ Internationalization
+## Internationalization
 There are two additional arguments to Tabulator#initialize for internationalization.
 *alphabet*
 For internationalization, the alphabet of your user, uppercase, in
