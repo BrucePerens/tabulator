@@ -69,13 +69,11 @@ end
 ```
 
 ## Internationalization
-There are two additional arguments to Tabulator#initialize for internationalization.
-*alphabet*
-For internationalization, the alphabet of your user, uppercase, in
-alphabetical order (or the order in which you want them presented).
+There are two additional arguments to `Tabulator#initialize` for internationalization.
+*alphabet* is the alphabet of your user, uppercase, in
+alphabetical order (or the order in which you want data presented).
 See `Tabulator::English` for an example. The default will be `English` if not
 provided.
   
-*collate*(
-For internationalization, set *collate* to the Postgres SQL regional collation string
-for the user, like `"en_US"`. If this is not set, the default is "POSIX".
+*collate* is the Postgres SQL regional collation string
+for the user's language, like `"en_US"`. If this is not set, the default is "POSIX".
