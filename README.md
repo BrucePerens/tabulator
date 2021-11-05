@@ -32,7 +32,7 @@ class MyAction < BrowserAction
      query: CompanyQuery.new,
 
      # *field* is the name of the field that contains the name of the record
-     # which is to be sorted into alphabetical tabs. The provided query will
+     # which is to be sorted into alphabetical tabs. The provided *query* will
      # be extended to restrict the selected records to those in which *field*
      # starts with a the selected *letter*
      field: :name,
@@ -60,7 +60,7 @@ end
 ```
 
 Do this in your page, and it will render the data separated into alphabetical tabs:
-```
+```crystal
   # This resolves the query, so that you can present the data in a list, etc.
   array = selected.to_a
   ul do
@@ -76,6 +76,13 @@ Do this in your page, and it will render the data separated into alphabetical ta
   raw html_tabs
 end
 ```
+
+## Nonalphabetical data
+A tab bearing the character '#' will be included for all data that doesn't start
+with a letter in your alphabet. If you have a lot of data that starts with
+digits or other nonalphabetical characters, you can add them to the string
+passed to the *alphabet* argument, and each of those characters will get
+an individual tab.
 
 ## Internationalization
 There are two additional arguments to `Tabulator#initialize` for internationalization.
