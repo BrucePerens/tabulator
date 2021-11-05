@@ -23,23 +23,27 @@ class MyAction < BrowserAction
      # *letter* is the letter corresponding to the tab to present, it will be
      # a path parameter or a URL query parameter.
      letter: letter,
+
      # This is an Avram query. It can be complicated as necessary to refine the
      # objects to be displayed, but must not be *resolved* (made a complete query
      # which is executed) with a method like `first` or `to_a`. Methods will be
      # added to count the total records, and to restrict the query to only where
      # *field* starts with the requested letter.
      query: CompanyQuery.new
+
      # *field* is the name of the field that contains the name of the record
      # which is to be sorted into alphabetical tabs. The provided query will
      # be extended to restrict the selected records to those in which *field*
      # starts with a the selected *letter*
      field: :name,
+
      # Path is the path to this action, minus the selected letter, which will
-     be added to the end of this path. It can be something like "/companies/" 
-     if your route is "/companies/:letter", or "/companies?letter=" if your
-     route is "/companies" and you expect to use a URL query pararameter.
-     In both cases, the parameter name must be the same one provided to the
-     *letter* argument.
+     # be added to the end of this path. It can be something like "/companies/" 
+     # if your route is "/companies/:letter", or "/companies?letter=" if your
+     # route is "/companies" and you expect to use a URL query pararameter.
+     # In both cases, the parameter name must be the same one provided to the
+     # *letter* argument.
+     path: "/companies/"
     )
 
     # Render your page, providing *html_tabs* which renders the tabs, and
