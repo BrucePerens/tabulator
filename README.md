@@ -8,7 +8,7 @@ Add to shards.yml
       github: BrucePerens/tabulator
 ```
 
-Copy `lib/tabulator/css/style.sass` into your project stylesheet.
+Include `lib/tabulator/css/style.sass` in your project stylesheet, or copy it in.
 
 In an action, instantiate the tabulator:
 ```crystal
