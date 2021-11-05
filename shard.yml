@@ -1,0 +1,11 @@
+name: tabulator
+version: 0.1.1
+
+description: Internationalization of Crystal programs.
+
+authors:
+  - Bruce Perens <bruce@perens.com>
+
+crystal: 1.0.0
+
+license: Apache 2.0
